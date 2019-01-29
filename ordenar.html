@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ordenar</title>
+		<meta name="description" content="" />
+		<meta name="author" content="rafa" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+
+		<p>
+			Introduce la secuencia de números a ordenar, separados por comas.<br>
+			<input type="text" id="array">
+		</p>
+		<p>
+			<button onclick="original()">Original</button>
+		</p>
+		<p>
+			<button onclick="ascendente()">Ascendente</button>
+			<button onclick="descendente()">Descendente</button>
+		</p>
+
+		<p id="demo"></p>
+
+		<script>
+			var points = array();
+
+			function original() {
+				getArray();
+			  	document.getElementById("demo").innerHTML = points;
+			}
+			function ascendente() {
+				getArray();
+			  	points.sort(function(a, b){return a-b});
+			  	document.getElementById("demo").innerHTML = points;
+			}
+			function descendente() {
+				getArray();
+			  	points.sort(function(a, b){return b-a});
+			  	document.getElementById("demo").innerHTML = points;
+			}
+			function getArray() {
+			  	points = document.getElementById("array").value.split(",");
+			}
+		</script>
+
+	</body>
+</html>
