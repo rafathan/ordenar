@@ -1,2 +1,2 @@
-# multiplo
-Programa sencillo múltiplos en varios lenguajes de programación
+# ordenar
+Programa sencillo para ordenar arrays en varios lenguajes de programación
