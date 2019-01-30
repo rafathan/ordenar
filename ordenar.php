@@ -7,25 +7,27 @@ if(isset($_POST["array"])){
 	//echo "isset array";
 	$original = $_POST["array"];
 	$points = explode(",", $_POST["array"]);
-	var_dump($_POST);
+	//var_dump($_POST);
 }
 
 if(isset($_POST["ascendente"])){
 	//echo "asc1";
-	ascendente($points);
+	$points = ascendente($points);
 }
 if(isset($_POST["descendente"])){
 	//echo "desc1";
-	descendente($points);
+	$points = descendente($points);
 }
 
 function ascendente($array) {
 	//echo "asc2";
   	asort($array);
+	return $array;
 }
 function descendente($array) {
 	//echo "desc2";
   	arsort($array);
+	return $array;
 }
 
 function mostrar($array){
